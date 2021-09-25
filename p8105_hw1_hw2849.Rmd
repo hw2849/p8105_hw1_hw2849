@@ -49,5 +49,20 @@ mean(pull(df, 4))
 ```
 As the results shown, we can take means of the sample size and the logical vector, but not for for the character vector or the factor vector. 
 
+### Convert variables
+Use `as.numeric` function to the logical, character, and factor variables
 
+```{r, eval = FALSE}
 
+## logical vector
+as.numeric(pull(df, 2))
+
+## character vector
+as.numeric(pull(df, 3))
+
+## factor vector
+as.numeric(pull(df, 4))
+
+```
+
+applies the as.numeric function to the logical, character, and factor variables
