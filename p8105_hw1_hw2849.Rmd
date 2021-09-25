@@ -62,7 +62,25 @@ as.numeric(pull(df, 3))
 
 ## factor vector
 as.numeric(pull(df, 4))
-
 ```
 
-applies the as.numeric function to the logical, character, and factor variables
+Apply the as.numeric function to the logical, character, and factor variables. The results return a list of numbers for logical variable and factor variable. It explains there exists a mean for logical variable since it consider `TRUE` as `1` and `FALSE` as `0`, and it returns a mathematical mean for logical vector.
+
+## Problem 2
+
+### A short description of the dataset
+```{r}
+data("penguins", package = "palmerpenguins")
+
+summary(penguins)
+nrow(penguins)
+ncol(penguins)
+``` 
+The size of the dataset is 344 rows and 8 columns. It contains penguins species and their habits, bill length and depth, flipper length, body mass, sex and ages. These penguins contain 165 female penguins and 168 male penguins, born between 2007 and 2009. The mean of flipper length is 200.9. 
+
+### scatter plot
+```{r scatter}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm)) + geom_point() + aes(color = species)
+
+ggsave("penguins_scatterplot.pdf")
+```
