@@ -1,7 +1,7 @@
 ---
 title: "P8105_HW1_hw2849"
 author: "Haotian Wu"
-output: html_document
+output: github_document
 ---
 ```{r}
 library(tidyverse)
@@ -30,7 +30,7 @@ df <- tibble(
   fac_vec = factor(c("tall", "grande", "venti", "grande", "venti", "grande", "tall", "venti", "grande", "tall"))
   
 )
-
+df
 ```
 
 ### Take the mean of each variable
